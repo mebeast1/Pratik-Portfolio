@@ -99,7 +99,7 @@ const AboutCards = () => (
           <Code className="h-6 w-6 text-primary" />
         </div>
         <div>
-          <h4 className="font-semibold text-base">Foundational Skills & Core Technologies</h4>
+          <h4 className="font-semibold text-base text-yellow-300">Foundational Skills & Core Technologies</h4>
           <p className="text-muted-foreground text-sm">
             Passionate ReactJS developer building responsive web interfaces.
           </p>
@@ -113,7 +113,7 @@ const AboutCards = () => (
           <User className="h-6 w-6 text-primary" />
         </div>
         <div>
-          <h4 className="font-semibold text-base">Problem-Solving & Learning Agility</h4>
+          <h4 className="font-semibold text-base text-yellow-300">Problem-Solving & Learning Agility</h4>
           <p className="text-muted-foreground text-sm">
             Loves solving problems. Constantly learning new technologies.
           </p>
@@ -127,7 +127,7 @@ const AboutCards = () => (
           <Briefcase className="h-6 w-6 text-primary" />
         </div>
         <div>
-          <h4 className="font-semibold text-base">Collaborative Spirit</h4>
+          <h4 className="font-semibold text-base text-yellow-300">Collaborative Spirit</h4>
           <p className="text-muted-foreground text-sm">
             Eager team player, ready improve user experiences.
           </p>
