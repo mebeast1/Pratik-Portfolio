@@ -11,7 +11,7 @@ export const HeroSection = () => {
 
           
           <div className="flex justify-center">
-            <div className="w-35 h-35 md:w-45 md:h-45 rounded-full overflow-hidden border-4 border-primary shadow-lg opacity-0 animate-fade-in">
+            <div className="w-35 h-35 md:w-50 md:h-50 rounded-full overflow-hidden border-4 border-primary shadow-lg opacity-0 animate-fade-in">
              
               <img
                 src="/profilepic.jpg"

@@ -1,6 +1,8 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/pagination";
 
 const projects = [
   {
@@ -37,7 +39,7 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-10 px-4 relative">
+    <section id="projects" className="py-5 px-4 relative">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
           Featured <span className="text-primary">Projects</span>
@@ -48,19 +50,24 @@ export const ProjectsSection = () => {
           showcases my skills with React, Tailwind, and modern development tools.
         </p>
 
-        {/* Desktop and tablet: grid layout */}
+        
         <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
-        {/* Mobile: swiper carousel */}
+        
         <div className="md:hidden">
-          <Swiper spaceBetween={20} slidesPerView={1} pagination={{ clickable: true }}>
+          <Swiper
+            spaceBetween={20}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            modules={[Pagination]}
+          >
             {projects.map((project) => (
               <SwiperSlide key={project.id}>
-                <ProjectCard project={project} />
+                <ProjectCard project={project} mobile />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -81,8 +88,8 @@ export const ProjectsSection = () => {
   );
 };
 
-const ProjectCard = ({ project }) => (
-  <div className="group bg-card rounded-xl overflow-hidden shadow-sm card-hover flex flex-col h-full">
+const ProjectCard = ({ project, mobile }) => (
+  <div className={`group bg-card rounded-xl overflow-hidden shadow-sm card-hover flex flex-col h-full ${mobile ? "min-h-[450px]" : ""}`}>
     <div className="aspect-video overflow-hidden">
       <img
         src={project.image}
